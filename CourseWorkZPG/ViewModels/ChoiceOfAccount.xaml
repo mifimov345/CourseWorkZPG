@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="CourseWorkZPG.ViewModels.ChoiceOfAccount"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CourseWorkZPG.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="350" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:BoolVisConverter x:Key="BoolVisConverter"/>
+    </UserControl.Resources>
+
+    <Grid Background="#A9CCE3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Grid Width="246">
+                <TextBlock x:Name="marker1" Height="16" FontSize="6" Margin="118,5,70,21" Foreground="Red"><Run Text="Заполните все "/><LineBreak/><Run Language="ru-ru" Text="допустимые "/><Run Text="поля!"/></TextBlock>
+                <TextBlock Text="Добавление в базу данных" FontSize="7" Margin="-10,5,173,24"/>
+                <ComboBox Margin="-25,21,208,0" FontSize="4" Height="16" Width="50" x:Name="CBA">
+                    <ComboBoxItem Content="Предмет" FontSize="4"/>
+                    <ComboBoxItem Content="NPC" FontSize="4"/>
+                    <ComboBoxItem Content="Локация" FontSize="4"/>
+                </ComboBox>
+                <local:HintInputter Margin="36,24,160,2" FontSize="7" Height="16" Width="50" x:Name="TBAName" IsEnabled="False"/>
+                <local:HintInputter Margin="91,24,105,2" FontSize="7" Height="16" Width="50" x:Name="TBADescription" IsEnabled="False"/>
+                <ComboBox x:Name="CBAItems" FontSize="4" Height="16" Width="50" Margin="146,24,50,2" IsEnabled="False"/>
+                <ComboBox x:Name="CBALocations" FontSize="4" Height="16" Width="50" Margin="201,24,-5,2" IsEnabled="False"/>
+                <Button x:Name="AddingButton" Height="16" Width="70" Margin="181,3,-5,23" Content="Добавить" FontSize="9" Click="AddingButton_Click" IsEnabled="False"/>
+            </Grid>
+        </Viewbox>
+        <Viewbox Grid.Row="2">
+            <Grid Width="246">
+                <TextBlock Text="Удаление из базы данных" FontSize="7" Margin="1,0,158,29"/>
+                <TextBlock x:Name="marker2" Height="16" Width="50" Margin="153,11,43,11" FontSize="6" Foreground="Red" ><Run Text="Заполните все "/><LineBreak/><Run Language="ru-ru" Text="допустимые "/><Run Text="поля!"/></TextBlock>
+                <ComboBox Margin="-6,12,206,10" FontSize="4" x:Name="CBD" Height="16">
+                    <ComboBoxItem Content="Предмет" FontSize="4"/>
+                    <ComboBoxItem Content="NPC" FontSize="4"/>
+                    <ComboBoxItem Content="Локация" FontSize="4"/>
+                </ComboBox>
+                <ComboBox x:Name="CBDVariable" Height="16" Width="50" Margin="45,12,151,10" FontSize="7" IsEnabled="False"/>
+                <Button x:Name="RemoveItem" Height="16" Width="50" Content="Удалить" FontSize="9" Click="RemoveItem_Click" IsEnabled="False"/>
+            </Grid>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Margin="-8,0,8,5" Grid.RowSpan="2">
+            <Grid Width="246">
+                <TextBlock Text="Изменить в базе данных" FontSize="7" Margin="-7,-2,165,31"/>
+                <TextBlock x:Name="marker3" FontSize="6" Width="50" Height="16" Margin="153,-4,43,29" Foreground="Red"><Run Text="Заполните все "/><LineBreak/><Run Language="ru-ru" Text="допустимые "/><Run Text="поля!"/></TextBlock>
+                <ComboBox Margin="-11,14,207,11" FontSize="4" x:Name="CBC" Height="16">
+                </ComboBox>
+                <ComboBox Height="16" FontSize="7" Width="50" Margin="45,12,151,10" x:Name="ChangingVariable" IsEnabled="False"/>
+                <local:HintInputter Width="50" FontSize="7" Height="16" x:Name="ChangingName" Margin="98,12,98,10" IsEnabled="False"/>
+                <TextBox Width="50" Height="16" FontSize="7" x:Name="ChangingInput2" Margin="153,12,43,10" IsEnabled="False"/>
+                <ComboBox Width="50" FontSize="7" Height="16" x:Name="ChangeCB" Margin="208,13,-12,11" IsEnabled="False"/>
+                <Button Width="50" x:Name="ChangeItem" Margin="208,-4,-12,29" Content="Изменить" FontSize="9" Click="ChangeItem_Click" IsEnabled="False"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Book_icon.png" />
+    <None Remove="Resources\FoolsWalk.jpg" />
+    <None Remove="Resources\Gears_icon.png" />
+    <None Remove="Resources\Info_icon.png" />
+    <None Remove="Resources\korona_shuta.png" />
+    <None Remove="Resources\korona_shuta_Icon.ico" />
+    <None Remove="Resources\Menu_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.100.3" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Npgsql" Version="7.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Book_icon.png" />
+    <Resource Include="Resources\FoolsWalk.jpg" />
+    <Resource Include="Resources\Gears_icon.png" />
+    <Resource Include="Resources\Info_icon.png" />
+    <Resource Include="Resources\korona_shuta.png" />
+    <Resource Include="Resources\korona_shuta_Icon.ico" />
+    <Resource Include="Resources\Menu_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="jsconfig1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

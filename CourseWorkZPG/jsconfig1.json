@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {
+    "Postgres": "Server=localhost;Port=5432;Database=ZPG_3;User Id=postgres;Password=root;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
